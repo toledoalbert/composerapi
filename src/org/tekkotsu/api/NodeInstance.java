@@ -60,6 +60,10 @@ public class NodeInstance {
 	public ArrayList<TransitionInstance> getInTrans(){
 		return inTrans;
 	}
+	
+	public String getColor(){
+		return color;
+	}
 
 
 
@@ -83,6 +87,10 @@ public class NodeInstance {
 
 	public void setInTrans(ArrayList<TransitionInstance> inTrans){
 		this.inTrans = inTrans;
+	}
+	
+	public void setColor(String color){
+		this.color = color;
 	}
 
 }

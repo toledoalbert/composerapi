@@ -53,6 +53,10 @@ public class TransitionInstance {
 	public ArrayList<NodeInstance> geTargets(){
 		return targets;
 	}
+	
+	public String getColor(){
+		return color;
+	}
 
 
 
@@ -70,8 +74,12 @@ public class TransitionInstance {
 		this.sources = sources;
 	}
 
-	public void setInTrans(ArrayList<TransitionInstance> inTrans){
+	public void setInTrans(ArrayList<NodeInstance> targets){
 		this.targets = targets;
+	}
+	
+	public void setColor(String color){
+		this.color = color;
 	}
 
 }
