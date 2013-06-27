@@ -30,6 +30,15 @@ public class NodeClass {
 		this.parents = parents;
 	}
 	
+	public NodeClass(String name, ArrayList<ConstructorCall> parents, ConstructorCall constructor){
+		this.name = name;
+		this.setup = null;
+		this.constructor = constructor;
+		this.color = "white";								//TODO
+		this.definition = "New Node Class: " + name;		//TODO
+		this.parents = parents;
+	}
+	
 
 
 	//Accessor methods

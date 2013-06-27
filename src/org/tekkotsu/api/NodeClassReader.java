@@ -3,6 +3,10 @@ package org.tekkotsu.api;
 import java.util.ArrayList;
 
 import org.jdom2.*;
+import org.jdom2.input.SAXBuilder;
+import com.thoughtworks.xstream.*;
+
+import javax.xml.bind.*;
 
 public class NodeClassReader {
 
@@ -20,7 +24,8 @@ public class NodeClassReader {
 	//store in an arraylist | returns the arraylist of the nodeclasses
 	public ArrayList<NodeClass> getNodeClasses(){
 		
-		
+		SAXBuilder reader = new SAXBuilder();
+		Document document = new Document();
 		
 		return nodeClasses;
 	}

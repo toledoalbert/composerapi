@@ -5,12 +5,14 @@ public class Parameter {
 	private String type;
 	private String value;
 	private String helpText;
+	private boolean optional;
 	
 	//Constructor
-	public Parameter(String type, String value, String helpText){
+	public Parameter(String type, String value, boolean optional, String helpText){
 		this.type = type;
 		this.value = value;
 		this.helpText = helpText;
+		this.optional = optional;
 	}
 	
 
@@ -30,6 +32,10 @@ public class Parameter {
 		return helpText;
 	}
 	
+	public boolean ifOptional(){
+		return optional;
+	}
+	
 
 
 
@@ -45,6 +51,10 @@ public class Parameter {
 
 	public void setHelpText(String helpText){
 		this.helpText = helpText;
+	}
+	
+	public void setIfOptional(boolean optional){
+		this.optional = optional;
 	}
 
 }
