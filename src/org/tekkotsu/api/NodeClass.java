@@ -13,12 +13,13 @@ public class NodeClass {
 	private String name;						//Name of the node
 	private String definition;					//Definition of the node
 	private SetupMachine setup;					//List of the nodes contained
+	private ArrayList<ConstructorCall> parents;	//Constructors of parents
 	private ConstructorCall constructor;		//Constructor
 	private String color;						//Color of the node
 	
 
 	//Full argument constructor
-	public NodeClass(String name, SetupMachine setup, ConstructorCall constructor, String color, String definition){
+	public NodeClass(String name, SetupMachine setup, ConstructorCall constructor, String color, String definition, ArrayList<ConstructorCall> parents){
 		
 		//set arguments from parameters
 		this.name = name;
@@ -26,6 +27,7 @@ public class NodeClass {
 		this.constructor = constructor;
 		this.color = color;
 		this.definition = definition;
+		this.parents = parents;
 	}
 	
 
@@ -56,7 +58,9 @@ public class NodeClass {
 		return this.constructor.getParameters().size();
 	}
 	
-
+	public ArrayList<ConstructorCall> getParents(){
+		return parents;
+	}
 
 
 
@@ -86,7 +90,10 @@ public class NodeClass {
 		this.color = color;
 	}
 	
-
+	public void setParents(ArrayList<ConstructorCall> parents){
+		this.parents = parents;
+	}
+	
 
 
 	//Single element mutator methods
@@ -98,7 +105,17 @@ public class NodeClass {
 		this.constructor.removeParameter(parameter);
 	}
 	
+	public void addParent(ConstructorCall parent){
+		this.parents.add(parent);
+	}
 	
+	public void removeParent(ConstructorCall parent){
+		this.parents.remove(parent);
+	}
+	
+	public void removeParent(int index){
+		this.parents.remove(index);
+	}
 	
 	
 }
