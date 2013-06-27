@@ -23,15 +23,6 @@ public class ConstructorCall {
 		this.parameters = parameters;
 	}
 	
-	//Single value adding/removing mutators
-	public void addParameter(Parameter parameter){
-		this.parameters.add(parameter);
-	}
-	
-	public void removeParameter(Parameter parameter){
-		this.parameters.remove(parameter);
-	}
-	//
 	
 	//Accessor methods
 	public String getName(){
@@ -41,5 +32,15 @@ public class ConstructorCall {
 	public ArrayList<Parameter> getParameters(){
 		return parameters;
 	}
+	
+	
+	//Mutators for single elements.
+	public void addParameter(Parameter parameter){
+		this.parameters.add(parameter);
+	}
+	
+	public void removeParameter(Parameter parameter){
+		this.parameters.remove(parameter);
+	}	
 
 }

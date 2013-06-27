@@ -10,13 +10,9 @@ import java.util.ArrayList;
 public class SetupMachine {
 	
 
-
-
 	//Attributes
 	private ArrayList<NodeInstance> Nodes;				//List of the nodes
 	private ArrayList<TransitionInstance> Transitions;	//List of the transitions
-	
-
 
 
 	//Constructor
@@ -25,7 +21,11 @@ public class SetupMachine {
 		this.Transitions = Transitions;
 	}
 	
-
+	//No argument constructor to initialize empty setup machine.
+	public SetupMachine(){
+		this.Nodes = new ArrayList<NodeInstance>();
+		this.Transitions = new ArrayList<TransitionInstance>();
+	}
 
 
 
@@ -41,8 +41,6 @@ public class SetupMachine {
 
 
 
-
-
 	//Mutator methods
 	public void setNodes(ArrayList<NodeInstance> Nodes){
 		this.Nodes = Nodes;
@@ -52,7 +50,6 @@ public class SetupMachine {
 		this.Transitions = Transitions;
 	}
 	
-
 
 
 

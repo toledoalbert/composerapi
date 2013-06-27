@@ -29,11 +29,9 @@ public class TransitionInstance {
 		this.parameters = type.getParameters();
 		this.sources = new ArrayList<NodeInstance>();
 		this.targets = new ArrayList<NodeInstance>();
-		this.color = type.getColor();
+		this.color = type.getColor();	//TODO Value can be manipulated for slightly lighter or darker.
 		
 	}
-
-
 
 
 
@@ -57,6 +55,21 @@ public class TransitionInstance {
 	public String getColor(){
 		return color;
 	}
+	
+	//Returns number of parameters.
+	public int getNumOfParameters(){
+		return parameters.size();
+	}
+	
+	//Returns number of targets.
+	public int getNumOfTargets(){
+		return targets.size();
+	}
+	
+	//Returns number of sources.
+	public int getNumOfSources(){
+		return sources.size();
+	}	
 
 
 
@@ -80,6 +93,34 @@ public class TransitionInstance {
 	
 	public void setColor(String color){
 		this.color = color;
+	}
+	
+
+	
+	//Add/Remove parameters
+	public void addParameter(Parameter parameter){
+		this.parameters.add(parameter);
+	}
+	
+	public void removeParameter(Parameter parameter){
+		this.parameters.remove(parameter);
+	}
+	
+	//Add/Remove targets/sources
+	public void addTarget(NodeInstance target){
+		this.targets.add(target);
+	}
+	
+	public void addOutTrans(NodeInstance source){
+		this.sources.add(source);
+	}
+	
+	public void removeInTrans(NodeInstance target){
+		this.targets.remove(target);
+	}
+	
+	public void removeOutTrans(NodeInstance source){
+		this.sources.remove(source);
 	}
 
 }

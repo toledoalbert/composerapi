@@ -21,7 +21,6 @@ public class NodeClass {
 	//Full argument constructor
 	public NodeClass(String name, SetupMachine setup, ConstructorCall constructor, String color, String definition, ArrayList<ConstructorCall> parents){
 		
-		//set arguments from parameters
 		this.name = name;
 		this.setup = setup;
 		this.constructor = constructor;
@@ -30,9 +29,10 @@ public class NodeClass {
 		this.parents = parents;
 	}
 	
+	//3 Argument Constructor. Sets default values for the rest of the fields.
 	public NodeClass(String name, ArrayList<ConstructorCall> parents, ConstructorCall constructor){
 		this.name = name;
-		this.setup = null;
+		this.setup = null;									//No setup machine by default.
 		this.constructor = constructor;
 		this.color = "white";								//TODO
 		this.definition = "New Node Class: " + name;		//TODO
@@ -105,7 +105,7 @@ public class NodeClass {
 	
 
 
-	//Single element mutator methods
+	//Mutator methods that adds/ removes single element to/from the list attributes.
 	public void addParameter(Parameter parameter){
 		this.constructor.addParameter(parameter);
 	}
@@ -122,9 +122,18 @@ public class NodeClass {
 		this.parents.remove(parent);
 	}
 	
-	public void removeParent(int index){
+	public void removeParent(int index){	//Remove with index because order matters.
 		this.parents.remove(index);
 	}
+	
+	//TODO return instance from a nodeclass object (just for convenience)
+	/*
+	 * 
+	 * public NodeInstance makeInstance(){
+	 * 	NodeInstance instance = new NodeInstance(this);
+	 * 	return instance;
+	 * 	
+	 */
 	
 	
 }

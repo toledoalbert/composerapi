@@ -8,8 +8,8 @@ public class NodeInstance {
 	private NodeClass type;
 	private String label;
 	private ArrayList<Parameter> parameters;
-	private ArrayList<TransitionInstance> outTrans;
-	private ArrayList<TransitionInstance> inTrans;
+	private ArrayList<TransitionInstance> outTrans;		//Outgoing transitions
+	private ArrayList<TransitionInstance> inTrans;		//Incoming transitions
 	private String color;
 	
 
@@ -32,11 +32,9 @@ public class NodeInstance {
 		this.parameters = type.getParameters();
 		this.inTrans = new ArrayList<TransitionInstance>();
 		this.outTrans = new ArrayList<TransitionInstance>();
-		this.color = type.getColor();
+		this.color = type.getColor();		//TODO Value can be manipulated for slightly lighter or darker.
 		
 	}
-
-
 
 
 
@@ -65,6 +63,20 @@ public class NodeInstance {
 		return color;
 	}
 
+	//Returns number of parameters.
+	public int getNumOfParameters(){
+		return parameters.size();
+	}
+	
+	//Returns number of outgoing transitions.
+	public int getNumOfOutTrans(){
+		return outTrans.size();
+	}
+	
+	//Returns number of incoming transitions.
+	public int getNumOfInTrans(){
+		return inTrans.size();
+	}
 
 
 
@@ -92,5 +104,32 @@ public class NodeInstance {
 	public void setColor(String color){
 		this.color = color;
 	}
+	
+	//Add/Remove parameters
+	public void addParameter(Parameter parameter){
+		this.parameters.add(parameter);
+	}
+	
+	public void removeParameter(Parameter parameter){
+		this.parameters.remove(parameter);
+	}
+	
+	//Add/Remove transitions
+	public void addInTrans(TransitionInstance inTrans){
+		this.inTrans.add(inTrans);
+	}
+	
+	public void addOutTrans(TransitionInstance outTrans){
+		this.outTrans.add(outTrans);
+	}
+	
+	public void removeInTrans(TransitionInstance inTrans){
+		this.inTrans.remove(inTrans);
+	}
+	
+	public void removeOutTrans(TransitionInstance outTrans){
+		this.outTrans.remove(outTrans);
+	}
+	
 
 }

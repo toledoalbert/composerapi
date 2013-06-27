@@ -15,6 +15,14 @@ public class Parameter {
 		this.optional = optional;
 	}
 	
+	//Constructor for quick parameter creation.
+	public Parameter(String type, String value){
+		this.type = type;
+		this.value = value;
+		this.helpText = "Enter parameter value here.";
+		this.optional = true;
+	}
+	
 
 
 

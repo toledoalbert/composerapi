@@ -24,9 +24,8 @@ public class TransitionClass {
 		this.color = color;
 		this.constructor = constructor;
 		
-	}//end constructor
+	}
 	
-
 
 
 
@@ -51,6 +50,10 @@ public class TransitionClass {
 		return this.constructor.getParameters().size();
 	}
 	
+	public ConstructorCall getConstructor(){
+		return constructor;
+	}
+	
 
 
 
@@ -64,8 +67,16 @@ public class TransitionClass {
 		this.color = color;
 	}
 	
+	public void setDefinition(String definition){
+		this.definition = definition;
+	}
+	
 	public void setParameters(ArrayList<Parameter> parameters){
 		this.constructor.setParameters(parameters);
+	}
+	
+	public void setConstructor(ConstructorCall constructor){
+		this.constructor = constructor;
 	}
 	
 
@@ -80,4 +91,13 @@ public class TransitionClass {
 	public void removeParameter(Parameter parameter){
 		this.constructor.removeParameter(parameter);
 	}
+	
+	//TODO return instance from a transitionclass object (just for convenience)
+		/*
+		 * 
+		 * public TransitionInstance makeInstance(){
+		 * 	TransitionInstance instance = new TransitionInstance(this);
+		 * 	return instance;
+		 * 	
+		 */
 }
