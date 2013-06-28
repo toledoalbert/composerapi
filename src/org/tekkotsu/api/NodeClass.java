@@ -34,8 +34,8 @@ public class NodeClass {
 		this.name = name;
 		this.setup = null;									//No setup machine by default.
 		this.constructor = constructor;
-		this.color = "white";								//TODO
-		this.definition = "New Node Class: " + name;		//TODO
+		this.color = "white";								//TODO default color white.
+		this.definition = "New Node Class: " + name;		//TODO default definition
 		this.parents = parents;
 	}
 	
