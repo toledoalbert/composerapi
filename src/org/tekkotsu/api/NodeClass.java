@@ -30,7 +30,7 @@ public class NodeClass {
 	}
 	
 	//3 Argument Constructor. Sets default values for the rest of the fields.
-	public NodeClass(String name, ArrayList<ConstructorCall> parents, ConstructorCall constructor){
+	public NodeClass(String name, ConstructorCall constructor){
 		this.name = name;
 		this.setup = null;									//No setup machine by default.
 		this.constructor = constructor;
