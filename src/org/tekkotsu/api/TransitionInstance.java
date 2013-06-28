@@ -48,7 +48,7 @@ public class TransitionInstance {
 		return sources;
 	}
 
-	public ArrayList<NodeInstance> geTargets(){
+	public ArrayList<NodeInstance> getTargets(){
 		return targets;
 	}
 	

@@ -1,7 +1,9 @@
 package org.tekkotsu.api;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import com.thoughtworks.xstream.*;
 import com.thoughtworks.xstream.io.xml.DomDriver;
@@ -40,6 +42,14 @@ public class xstreamTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		
+		//Reading stuff
+		FileInputStream inputfile = new FileInputStream("DefaultNodes.xml");
+		ArrayList<NodeClass> defaultsFromFile = (ArrayList<NodeClass>) xstream.fromXML(inputfile);
+		System.out.println("read from file.");
+		System.out.println(defaultsFromFile.toString());
+		inputfile.close();
 		
 	}
 	
