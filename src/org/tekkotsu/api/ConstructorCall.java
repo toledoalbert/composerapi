@@ -14,6 +14,12 @@ public class ConstructorCall {
 		this.parameters = parameters;
 	}
 	
+	//Constructor that will construct with only a name. To add parameters later.
+	public ConstructorCall(String name){
+		this.name = name;
+		this.parameters = new ArrayList<Parameter>();
+	}
+	
 	//Mutator methods
 	public void setName(String name){
 		this.name = name;
