@@ -2,7 +2,7 @@
   <name>SoundNode</name>
   <definition>New Node Class: SoundNode</definition>
   <constructor>
-    <name>soundNodeConstructor</name>
+    <name>SoundNode</name>
     <parameters>
       <org.tekkotsu.api.Parameter>
         <type>music file</type>
