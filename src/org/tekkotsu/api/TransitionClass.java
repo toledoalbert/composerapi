@@ -26,6 +26,13 @@ public class TransitionClass {
 		
 	}
 	
+	public TransitionClass(String name, ConstructorCall constructor){
+		this.name = name;
+		this.constructor = constructor;
+		this.definition = "My new transition class.";
+		this.color = "#fffff";		//TODO	default color to be decided.
+	}
+	
 
 
 

@@ -111,15 +111,15 @@ public class TransitionInstance {
 		this.targets.add(target);
 	}
 	
-	public void addOutTrans(NodeInstance source){
+	public void addSource(NodeInstance source){
 		this.sources.add(source);
 	}
 	
-	public void removeInTrans(NodeInstance target){
+	public void removeTarget(NodeInstance target){
 		this.targets.remove(target);
 	}
 	
-	public void removeOutTrans(NodeInstance source){
+	public void removeSource(NodeInstance source){
 		this.sources.remove(source);
 	}
 

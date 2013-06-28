@@ -28,7 +28,7 @@ public class NodeInstance {
 	public NodeInstance(NodeClass type){
 		
 		this.type = type;
-		this.label = type.getName() + "instance";
+		this.label = type.getName().toLowerCase();
 		this.parameters = type.getParameters();
 		this.inTrans = new ArrayList<TransitionInstance>();
 		this.outTrans = new ArrayList<TransitionInstance>();

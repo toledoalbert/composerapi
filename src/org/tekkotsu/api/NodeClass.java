@@ -36,7 +36,17 @@ public class NodeClass {
 		this.constructor = constructor;
 		this.color = "white";								//TODO default color white.
 		this.definition = "New Node Class: " + name;		//TODO default definition
-		this.parents = parents;
+		this.parents = new ArrayList<ConstructorCall>();
+	}
+	
+	//Constructor for a nodeclass that serves as a statemachine to be used as a behavior.
+	public NodeClass(String name, SetupMachine setup){
+		this.name = name;
+		this.setup = setup;
+		this.constructor = null;
+		this.color = "white";
+		this.definition = "New Node Class: " + name;
+		this.parents = new ArrayList<ConstructorCall>();
 	}
 	
 
@@ -69,6 +79,10 @@ public class NodeClass {
 	
 	public ArrayList<ConstructorCall> getParents(){
 		return parents;
+	}
+	
+	public ConstructorCall getConstructor(){
+		return constructor;
 	}
 
 
