@@ -118,7 +118,11 @@ public class BehaviorWriter {
 				//for every source
 				for(int j = 0; j < current.getNumOfSources(); j++){
 					
-					transitions += sources.get(j).getLabel() + ", ";
+					transitions += sources.get(j).getLabel();
+					
+					if(j != current.getNumOfSources()-1){
+						transitions += ", ";
+					}
 					
 				}
 				
@@ -154,6 +158,7 @@ public class BehaviorWriter {
 			
 			transitions += "=> ";
 			
+			if(current.getNumOfTargets() != 0){
 			//if there are multiple targets
 			if(current.getNumOfTargets() > 1){
 				
@@ -181,7 +186,7 @@ public class BehaviorWriter {
 				transitions += current.getTargets().get(0).getLabel() + " ";
 				
 			}
-			
+			}
 			//go to the next line
 			transitions += "\n";
 			
