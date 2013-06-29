@@ -27,7 +27,7 @@ public class GenerateDefaultNodes {
 		
 		//Create components of SoundNode
 		Parameter musicFile = new Parameter("string", "\"barkmed.wav\"");
-		ConstructorCall soundNodeConstructor = new ConstructorCall("SoundNodeConstructor");
+		ConstructorCall soundNodeConstructor = new ConstructorCall("SoundNode");
 		soundNodeConstructor.addParameter(musicFile);
 		System.out.println("Components of soundNode created.");
 		//Create SoundNode
@@ -38,7 +38,7 @@ public class GenerateDefaultNodes {
 		defaultNodes.add(soundNode);
 		
 		//Create components of StateNode
-		ConstructorCall stateNodeConstructor = new ConstructorCall("StateNodeConstructor");
+		ConstructorCall stateNodeConstructor = new ConstructorCall("StateNode");
 		System.out.println("Components of stateNode created.");
 		//Create StateNode
 		NodeClass stateNode = new NodeClass("StateNode", stateNodeConstructor);
@@ -48,9 +48,9 @@ public class GenerateDefaultNodes {
 		defaultNodes.add(stateNode);
 		
 		//Create components of SpeechNode
-		Parameter speechName = new Parameter("string", "speechnode");
-		Parameter speechText = new Parameter("string", "Hello World");
-		ConstructorCall speechNodeConstructor = new ConstructorCall("SpeechNodeConstructor");
+		Parameter speechName = new Parameter("string", "\"speechnode\"");
+		Parameter speechText = new Parameter("string", "\"Hello World\"");
+		ConstructorCall speechNodeConstructor = new ConstructorCall("SpeechNode");
 		speechNodeConstructor.addParameter(speechName);
 		speechNodeConstructor.addParameter(speechText);
 		System.out.println("Components of speechNode created.");
@@ -63,7 +63,7 @@ public class GenerateDefaultNodes {
 		
 		
 		//Create components of LedNode
-		ConstructorCall ledNodeConstructor = new ConstructorCall("LedNodeConstructor");
+		ConstructorCall ledNodeConstructor = new ConstructorCall("LedNode");
 		System.out.println("Components of speechNode created.");
 		//Create LedNode
 		NodeClass ledNode = new NodeClass("LedNode", ledNodeConstructor);
