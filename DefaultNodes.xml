@@ -2,8 +2,9 @@
   <org.tekkotsu.api.NodeClass>
     <name>SoundNode</name>
     <definition>Plays a sound then signals completion.</definition>
+    <parents/>
     <constructor>
-      <name>SoundNodeConstructor</name>
+      <name>SoundNode</name>
       <parameters>
         <org.tekkotsu.api.Parameter>
           <type>string</type>
@@ -18,8 +19,9 @@
   <org.tekkotsu.api.NodeClass>
     <name>StateNode</name>
     <definition>No action. Parent for all other node classes.</definition>
+    <parents/>
     <constructor>
-      <name>StateNodeConstructor</name>
+      <name>StateNode</name>
       <parameters/>
     </constructor>
     <color>#C0C0C0</color>
@@ -27,18 +29,19 @@
   <org.tekkotsu.api.NodeClass>
     <name>SpeechNode</name>
     <definition>Flashes the robot&apos;s LED&apos;s.</definition>
+    <parents/>
     <constructor>
-      <name>SpeechNodeConstructor</name>
+      <name>SpeechNode</name>
       <parameters>
         <org.tekkotsu.api.Parameter>
           <type>string</type>
-          <value>speechnode</value>
+          <value>&quot;speechnode&quot;</value>
           <helpText>Enter parameter value here.</helpText>
           <optional>true</optional>
         </org.tekkotsu.api.Parameter>
         <org.tekkotsu.api.Parameter>
           <type>string</type>
-          <value>Hello World</value>
+          <value>&quot;Hello World&quot;</value>
           <helpText>Enter parameter value here.</helpText>
           <optional>true</optional>
         </org.tekkotsu.api.Parameter>
@@ -49,8 +52,9 @@
   <org.tekkotsu.api.NodeClass>
     <name>LedNode</name>
     <definition>New Node Class: LedNode</definition>
+    <parents/>
     <constructor>
-      <name>LedNodeConstructor</name>
+      <name>LedNode</name>
       <parameters/>
     </constructor>
     <color>white</color>
