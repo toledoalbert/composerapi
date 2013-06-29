@@ -28,8 +28,7 @@ public class DefaultClassReader {
 		
 		nodes = (ArrayList<NodeClass>) xstream.fromXML(nodesFile);
 		trans = (ArrayList<TransitionClass>) xstream.fromXML(transFile);
-		
-		System.out.println("SoundNode NodeClass object created from XML file.\n");		
+
 		
 	}
 	
