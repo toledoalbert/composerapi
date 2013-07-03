@@ -1,12 +1,13 @@
 <org.tekkotsu.api.NodeClass>
   <name>SoundNode</name>
   <definition>New Node Class: SoundNode</definition>
+  <parents/>
   <constructor>
-    <name>SoundNode</name>
+    <name>soundNodeConstructor</name>
     <parameters>
       <org.tekkotsu.api.Parameter>
         <type>music file</type>
-        <value>&quot;music.wav&quot;</value>
+        <value>music.wav</value>
         <helpText>Enter parameter value here.</helpText>
         <optional>true</optional>
       </org.tekkotsu.api.Parameter>
